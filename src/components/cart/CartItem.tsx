@@ -27,7 +27,7 @@ export function CartItem({ item }: CartItemProps) {
       <div className="flex-1 min-w-0">
         <h3 className="font-semibold text-foreground truncate">{foodItem.name}</h3>
         <p className="text-sm text-muted-foreground mb-2">
-          ${foodItem.price.toFixed(2)} each
+          ₹{foodItem.price.toFixed(2)} each
         </p>
 
         {/* Quantity controls */}
@@ -55,7 +55,7 @@ export function CartItem({ item }: CartItemProps) {
       {/* Subtotal and remove */}
       <div className="flex flex-col items-end justify-between">
         <span className="font-bold text-primary">
-          ${(foodItem.price * quantity).toFixed(2)}
+          ₹{(foodItem.price * quantity).toFixed(2)}
         </span>
         <Button
           variant="ghost"

@@ -207,7 +207,7 @@ const Checkout = () => {
                     <span className="text-muted-foreground">
                       {item.quantity}x {item.foodItem.name}
                     </span>
-                    <span>${(item.foodItem.price * item.quantity).toFixed(2)}</span>
+                    <span>₹{(item.foodItem.price * item.quantity).toFixed(2)}</span>
                   </div>
                 ))}
               </div>
@@ -215,7 +215,7 @@ const Checkout = () => {
               <div className="space-y-3 py-4 border-t border-border">
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Subtotal</span>
-                  <span>${totalAmount.toFixed(2)}</span>
+                  <span>₹{totalAmount.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Delivery Fee</span>
@@ -223,14 +223,14 @@ const Checkout = () => {
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Tax</span>
-                  <span>${(totalAmount * 0.1).toFixed(2)}</span>
+                  <span>₹{(totalAmount * 0.1).toFixed(2)}</span>
                 </div>
               </div>
 
               <div className="flex justify-between items-center pt-4 border-t border-border">
                 <span className="font-semibold">Total</span>
                 <span className="font-bold text-xl text-primary">
-                  ${(totalAmount * 1.1).toFixed(2)}
+                  ₹{(totalAmount * 1.1).toFixed(2)}
                 </span>
               </div>
             </div>

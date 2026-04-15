@@ -42,7 +42,7 @@ export function FoodCard({ item }: FoodCardProps) {
         <div className="flex items-start justify-between gap-2 mb-2">
           <h3 className="font-semibold text-foreground line-clamp-2">{item.name}</h3>
           <span className="font-bold text-primary whitespace-nowrap">
-            ${item.price.toFixed(2)}
+            ₹{item.price.toFixed(2)}
           </span>
         </div>
 

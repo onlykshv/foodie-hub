@@ -94,7 +94,7 @@ const AdminOrders = () => {
 
                     <div className="flex items-center justify-between">
                       <span className="font-bold text-primary">
-                        ${Number(order.total_amount).toFixed(2)}
+                        ₹{Number(order.total_amount).toFixed(2)}
                       </span>
                       <span className="text-xs text-muted-foreground">
                         {order.items?.length || 0} items
@@ -110,7 +110,7 @@ const AdminOrders = () => {
                           <div key={item.id} className="flex justify-between text-sm">
                             <span>{item.quantity}x {item.food_item_name}</span>
                             <span className="text-muted-foreground">
-                              ${item.subtotal.toFixed(2)}
+                              ₹{item.subtotal.toFixed(2)}
                             </span>
                           </div>
                         ))}

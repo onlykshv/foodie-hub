@@ -89,7 +89,7 @@ export function OrderCard({ order }: OrderCardProps) {
               <span>
                 {item.quantity}x {item.food_item_name}
               </span>
-              <span className="text-muted-foreground">${item.subtotal.toFixed(2)}</span>
+              <span className="text-muted-foreground">₹{item.subtotal.toFixed(2)}</span>
             </div>
           ))}
         </div>
@@ -97,7 +97,7 @@ export function OrderCard({ order }: OrderCardProps) {
         <div className="flex justify-between items-center mt-4 pt-4 border-t border-border">
           <span className="font-medium">Total</span>
           <span className="font-bold text-lg text-primary">
-            ${order.total_amount.toFixed(2)}
+            ₹{order.total_amount.toFixed(2)}
           </span>
         </div>
       </div>

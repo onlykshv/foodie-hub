@@ -49,13 +49,15 @@ const startServer = async () => {
     // Connect to MongoDB
     await connectDB();
 
-    // Auto-seed if database is empty (e.g., using in-memory server)
+    // Auto-seed if database is empty (only happens on first run)
     const User = require('./models/User');
     const userCount = await User.countDocuments();
     if (userCount === 0) {
-      console.log('📦 Database is empty, auto-seeding...');
+      console.log('\n📦 Database is empty — running first-time seed...');
       const seedDB = require('./seedHelper');
       await seedDB();
+    } else {
+      console.log(`   Existing data found: ${userCount} users in database`);
     }
 
     server.listen(PORT, () => {

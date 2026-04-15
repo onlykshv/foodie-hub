@@ -34,7 +34,7 @@ const AdminOverview = () => {
     },
     {
       label: 'Total Revenue',
-      value: `$${totalRevenue.toFixed(2)}`,
+      value: `₹${totalRevenue.toFixed(2)}`,
       icon: DollarSign,
       color: 'bg-green-100 text-green-600',
     },
@@ -84,7 +84,7 @@ const AdminOverview = () => {
                 <div>
                   <p className="font-medium">Order #{order.id.slice(0, 8).toUpperCase()}</p>
                   <p className="text-sm text-muted-foreground">
-                    {order.items?.length || 0} items • ${Number(order.total_amount).toFixed(2)}
+                    {order.items?.length || 0} items • ₹{Number(order.total_amount).toFixed(2)}
                   </p>
                 </div>
                 <span className={`status-badge status-${order.status}`}>

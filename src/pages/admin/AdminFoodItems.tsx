@@ -162,7 +162,7 @@ const AdminFoodItems = () => {
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="price">Price ($)</Label>
+                  <Label htmlFor="price">Price (₹)</Label>
                   <Input
                     id="price"
                     type="number"
@@ -268,7 +268,7 @@ const AdminFoodItems = () => {
               <div className="flex items-start justify-between gap-2 mb-2">
                 <h3 className="font-semibold truncate">{item.name}</h3>
                 <span className="font-bold text-primary whitespace-nowrap">
-                  ${item.price.toFixed(2)}
+                  ₹{item.price.toFixed(2)}
                 </span>
               </div>
 

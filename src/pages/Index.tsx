@@ -118,7 +118,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-muted-foreground text-sm">
-              © 2024 Foodie Hub. All rights reserved.
+              © 2026 Foodie Hub. All rights reserved.
             </p>
             <p className="text-muted-foreground text-sm">
               Built with ❤️ for food lovers
